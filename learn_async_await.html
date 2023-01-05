@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>learn asyn await</h1>
+</body>
+</html>
+
+<script>
+
+    console.log("learn asyn await")
+
+   let studentdata=[
+               {name:"Akib Ali" , age:"25year" , position :"software Engineer"},
+               {name:"Amil Ali" , age:"21year" , position :"Interior Engineer"},
+
+           ]
+
+
+           function getdata(){
+
+            setTimeout(()=>{
+
+                studentdata.map((elem,index)=>{
+
+                    return console.log(elem)
+                })
+
+            },2000)
+
+           }
+
+
+           function addonemoredata(newdata){
+            
+            return new Promise((resolved, reject)=>{
+
+                setTimeout(()=>{
+
+                studentdata.push(newdata)
+
+                let error = false;
+
+               if(!error){
+                resolved()
+
+               }else{
+                reject("something went wrong")
+               }
+                },4000)
+
+
+
+            })
+           }
+
+
+        //    addonemoredata({name:"Alshifa", age:"15year", proffession:"student"})
+        //    .then(getdata).catch((err)=>{
+        //      console.log(err)
+
+        //    })
+
+
+    
+             async function start(){
+
+                await addonemoredata({name:"Alshifa", age:"15year", proffession:"student"})
+                getdata()
+           }
+
+        
+            start()
+                      
+</script>
