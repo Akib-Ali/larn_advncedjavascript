@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>learn call methods</h1>
+</body>
+</html>
+
+<script>
+
+    const youtuber1 ={
+        name :"Thapa Technical",
+        content : "Programming channel",
+        feature : function(rating){
+
+            console.log(`very friendly way of teching . ${this.name} is my fav ${this.content}  ${rating} star`)
+        }
+
+    }
+
+     youtuber1.feature()
+
+     const youtuber2 ={
+
+        name :"code with harry",
+        content : "java coding"
+     }
+
+     youtuber1.feature.call(youtuber2, 5)
+</script>
