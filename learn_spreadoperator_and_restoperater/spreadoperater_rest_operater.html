@@ -45,6 +45,46 @@
 
 
 
+  //learn rest operater object
+
+
+  const students={
+
+    name:"Akib Ali",
+    age: "24year",
+    qualification :"diploma"
+  }
+
+
+  const {age,...rest} = students
+  console.log(age,rest)
+
+
+
+
+  //spraed operater
+
+  const biodata = {
+
+    fullname:"Amil Ali",
+    dob:"30",
+    position :"software engineer"
+  }
+
+//   const {fullname,dob,position} = biodata
+
+const updatebiodata={
+
+    ...biodata,
+    dob:40
+}
+
+console.log( updatebiodata)
+
+
+
+
+
 
 
 </script>
