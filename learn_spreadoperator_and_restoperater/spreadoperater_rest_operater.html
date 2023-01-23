@@ -15,33 +15,31 @@
 
     //learn rest operator
    
-   function learRestOperator(a,b,c,...rest){
+//    function learRestOperator(a,b,c,...rest){
 
-   console.log(rest)
+//    console.log(rest)
 
-    return a+b+c
+//     return a+b+c
 
 
 
-   }
+//    }
 
-   const storeoutput = learRestOperator(1,2,30,4,5,6,7)
-   console.log(storeoutput)
+//    const storeoutput = learRestOperator(1,2,30,4,5,6,7)
+//    console.log(storeoutput)
 
 
 
    //learn spreadoperater
 
-  let name = ["Akib", "Amil","Alshifa", "Uzma"]
+//   let name = ["Akib", "Amil","Alshifa", "Uzma"]
 
-  function learnSpreadOperator(name1,name2,name3,name4){
+//   function learnSpreadOperator(name1,name2,name3,name4){
 
-    console.log(name1,name2,name3,name4)
+//     console.log(name1,name2,name3,name4)
 
-
-
-  }
-  learnSpreadOperator(...name)
+//  }
+//   learnSpreadOperator(...name)
 
 
 
@@ -56,33 +54,55 @@
   }
 
 
-  const {age,...rest} = students
-  console.log(age,rest)
-
+  const {age,...restinfo} = students
+  console.log(age,restinfo)
 
 
 
   //spraed operater
 
-  const biodata = {
+//   const biodata = {
 
-    fullname:"Amil Ali",
-    dob:"30",
-    position :"software engineer"
-  }
+//     fullname:"Amil Ali",
+//     dob:"30",
+//     position :"software engineer"
+//   }
 
 //   const {fullname,dob,position} = biodata
 
-const updatebiodata={
+// const updatebiodata={
 
-    ...biodata,
-    dob:40
+//     ...biodata,
+//     dob:40
+// }
+
+// console.log( updatebiodata)
+
+
+console.log("llnnnnnn")
+
+
+const subject = ["hindi", "english", "math", "social", "science"]
+
+const [favouritesubject,...rest] = subject
+console.log(favouritesubject)
+console.log(rest)
+
+
+
+function myData(...args){
+console.log(args) ; // ["Marina",24,"Front-End Developer"]
 }
-
-console.log( updatebiodata)
-
+myData("Marina",24,"Front-End Developer") ;
 
 
+// spread operator
+console.log(".......spread operator.")
+
+let nameofstudent = ["Aman", "Rakesh", "Mohan"]
+
+console.log(nameofstudent)
+console.log(...nameofstudent)
 
 
 
