@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>learn spread operator and rest operator</h2>
+</body>
+</html>
+
+<script>
+
+    //learn rest operator
+   
+   function learRestOperator(a,b,c,...rest){
+
+   console.log(rest)
+
+    return a+b+c
+
+
+
+   }
+
+   const storeoutput = learRestOperator(1,2,30,4,5,6,7)
+   console.log(storeoutput)
+
+
+
+   //learn spreadoperater
+
+  let name = ["Akib", "Amil","Alshifa", "Uzma"]
+
+  function learnSpreadOperator(name1,name2,name3,name4){
+
+    console.log(name1,name2,name3,name4)
+
+
+
+  }
+  learnSpreadOperator(...name)
+
+
+
+
+
+</script>
